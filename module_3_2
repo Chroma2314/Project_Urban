@@ -1,0 +1,20 @@
+def send_email(message, recipient, *, sender = 'university.help@gmail.com'):
+    var = ('.com','.ru','.net')
+    if not (('@'  in recipient and sender) and recipient.endswith(var) and sender.endswith(var)):
+        print(f'Невозможно отправить письмо с {sender} на {recipient}.')
+    elif sender == recipient:
+        print('Невозможно отправить письмо самому себе!')
+    elif sender == 'university.help@gmail.com':
+        print(f'Письмо успешно отправлено с {sender} на {recipient}.')
+    else:
+        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с {sender} на {recipient}.')
+
+
+
+
+
+
+send_email('Проверка связи!', 'goblin@mail.ru')
+send_email('Вы тоже можете выиграть 10000000 рублей!', 'rosa2034@mail.ru', sender = 'nahlebalovo666@loh.net')
+send_email('Не забыть бы....', 'university.help@gmail.com')
+send_email('Потерялась собака', 'replit.noup')
