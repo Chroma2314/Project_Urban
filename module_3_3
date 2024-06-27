@@ -1,0 +1,25 @@
+def print_params(a=1, b='string', c=True):
+    print(a, b, c)
+
+
+values_list = ['sun', 90, False]
+values_dict = {'a': 34, 'b': 'moon', 'c': True}
+values_list_2 = [23, True]
+
+
+print('1.Функция с параметрами по умолчанию:')
+print()
+print_params(23)
+print_params(False, True)
+print_params()
+print_params(b=25)
+print_params(c=[1, 2, 3])
+# print_params(45, 'god', ['o','my'], 'red')
+print()
+print('2.Распаковка параметров:')
+print()
+print_params(*values_list)
+print_params(**values_dict)
+print()
+print('3.Распаковка + отдельные параметры:')
+print_params(*values_list_2,42)
